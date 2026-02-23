@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morikiko Club | 日本酒品飲深度導賞 - 大阪</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a202c;
+            --accent: #7a8c7a; 
+            --gold: #d4af37;
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .serif {
+            font-family: 'Noto Serif TC', serif;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1612910113708-20b14566f149?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- 獨立導航欄 -->
+    <nav class="fixed w-full z-50 glass-morphism shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <!-- 修改：移除 Logo 圖片，保留 Morikiko Club 文字 -->
+                    <span class="text-2xl font-bold tracking-tighter serif text-gray-800">MORIKIKO <span class="text-accent">CLUB</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-600">
+                    <a href="#about" class="hover:text-accent transition">導師簡介</a>
+                    <a href="#itinerary" class="hover:text-accent transition">行程安排</a>
+                    <a href="#accommodation" class="hover:text-accent transition">舒適住宿</a>
+                    <a href="#pricing" class="hover:text-accent transition">報名詳情</a>
+                </div>
+                <a href="#booking" class="bg-gray-800 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-gray-700 transition">立即預約</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏視覺 -->
+    <section class="relative h-[85vh] flex items-center justify-center hero-gradient text-white pt-20">
+        <div class="text-center px-4 max-w-4xl">
+            <div class="mb-6 inline-block bg-accent px-4 py-1 text-xs tracking-widest uppercase rounded">Morikiko Club 專屬導賞系列</div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 serif leading-tight">日本酒品飲導賞<br><span class="text-accent text-3xl md:text-5xl">OSAKA 大阪站</span></h1>
+            <p class="text-lg md:text-xl mb-10 font-light tracking-wide">由黃上瑜（江小魚）老師親領，開啟獨立研學之門</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#itinerary" class="bg-white text-gray-900 px-10 py-4 rounded-full font-bold hover:bg-gray-200 transition">行程一覽</a>
+                <a href="#booking" class="border border-white text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-gray-900 transition">立即報名</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 導師簡介 -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-w-4 aspect-h-5 bg-gray-100 rounded-lg overflow-hidden shadow-2xl">
+                        <img src="461179425_8291301150924823_5144512938897944600_n.jpg" alt="黃上瑜 (江小魚)" class="object-cover w-full h-full">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-accent p-8 text-white rounded-lg shadow-xl hidden md:block">
+                        <p class="text-sm uppercase tracking-widest mb-1">主講導師</p>
+                        <p class="text-2xl font-bold serif">黃上瑜 (江小魚)</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 serif text-gray-800 border-l-4 border-accent pl-6">名師領航 · 深度領會</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        香港人氣股評家、日本SSI日本酒國際酒匠、日本酒學講師 —— <span class="font-bold text-gray-900">黃上瑜（江小魚）</span> 將帶領參與人士深入大阪府，從專業的品質鑑定視角，領會關西地區日本酒的獨特風味與釀造工藝。
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-sm">
+                        <div class="flex items-center gap-3"><span class="text-accent">●</span> SSI日本酒國際酒匠</div>
+                        <div class="flex items-center gap-3"><span class="text-accent">●</span> 日本酒學講師</div>
+                        <div class="flex items-center gap-3"><span class="text-accent">●</span> 日本酒品質鑑定士</div>
+                        <div class="flex items-center gap-3"><span class="text-accent">●</span> 唎酒師資格</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 舒適便捷下榻 -->
+    <section id="accommodation" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold serif mb-4 text-gray-800">舒適便捷下榻</h2>
+                <p class="text-gray-500">位於梅田核心地段，為您的研學之旅提供溫馨支撐</p>
+            </div>
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 serif">Kiko Hotel Umeda</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-sm">
+                        我們為參與人士精心安排位於梅田一的 **Kiko Hotel Umeda**。這裡交通極其便利，讓您在繁忙的導賞行程後能得到充分休息。首日的品飲教學將在酒店專屬的 **Morikiko Club** 進行。
+                    </p>
+                    <ul class="text-xs text-gray-400 space-y-2">
+                        <li>• 鄰近梅田商圈，步行可達主要交通樞紐</li>
+                        <li>• Morikiko Club 提供專業品鑒空間</li>
+                        <li>• 專業的酒店管理與貼心服務</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1590559899731-a3828dfc385d?auto=format&fit=crop&q=80&w=800" alt="Osaka Umeda Landmark" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行程安排 -->
+    <section id="itinerary" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16 serif">深度導賞 · 行程解構</h2>
+            
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-10 items-start bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="md:w-1/3">
+                        <div class="text-accent text-5xl font-black mb-2 opacity-20 uppercase">Stage 01</div>
+                        <h3 class="text-xl font-bold mb-2">文化溯源與品飲教學</h3>
+                        <p class="text-gray-400 text-sm font-medium">地點：Morikiko Club</p>
+                    </div>
+                    <div class="md:w-2/3 border-l md:pl-10 border-gray-100">
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li>• 專業界解讀：講述日本酒歷史淵源、文化背景及基本知識</li>
+                            <li>• 感官訓練：現場提供約 6 款精選日本酒（每款2本），於 Morikiko Club 學習專業品飲技巧</li>
+                            <li>• 實戰練習：搭配當地搜羅之佐酒小食，體驗風味配搭藝術</li>
+                            <li>• 互動交流：會後可自由參與居酒屋晚膳（自費），即場增進交流</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 items-start bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="md:w-1/3">
+                        <div class="text-accent text-5xl font-black mb-2 opacity-20 uppercase">Stage 02</div>
+                        <h3 class="text-xl font-bold mb-2">酒藏探秘 · 釀造體驗</h3>
+                        <p class="text-gray-400 text-sm font-medium">地點：神戶市東灘區「灘五鄉」</p>
+                    </div>
+                    <div class="md:w-2/3 border-l md:pl-10 border-gray-100">
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li>• 專車見學：驅車前往浜福鶴、白鶴、福壽或菊正宗等知名酒造</li>
+                            <li>• 工藝了解：深入了解吟釀工房，體驗日本酒傳統與現代釀造過程</li>
+                            <li>• 主題午餐：於「櫻宴」享用日本料理，體驗既定菜式與日本酒的融合</li>
+                            <li>• 收穫歸程：17時結束參觀返回大阪市</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 收費與條款 -->
+    <section id="pricing" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 serif">報名及收費詳情</h2>
+            <div class="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
+                <div class="bg-accent p-10 text-white">
+                    <p class="text-xs uppercase tracking-widest mb-2 font-bold">每位深度導賞費用</p>
+                    <div class="text-4xl font-bold mb-2">6,000 - 6,500 <span class="text-lg font-normal">CNY/HKD</span></div>
+                    <p class="text-white/60 text-xs">（人民幣付款以一兌一計算）</p>
+                </div>
+                <div class="p-8 text-left max-w-2xl mx-auto">
+                    <h4 class="text-accent font-bold mb-6 text-sm uppercase text-center border-b border-gray-700 pb-2">包含內容</h4>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li class="flex items-center gap-3"><span class="text-accent">✔</span> Kiko Hotel Umeda 兩晚住宿</li>
+                        <li class="flex items-center gap-3"><span class="text-accent">✔</span> 首日 Morikiko Club 導賞教學及資料筆記</li>
+                        <li class="flex items-center gap-3"><span class="text-accent">✔</span> 6款清酒品飲體驗</li>
+                        <li class="flex items-center gap-3"><span class="text-accent">✔</span> 次日酒藏見學專車接送與「櫻宴」午餐</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-8 border-t border-gray-700 text-left">
+                    <h4 class="font-bold mb-3 text-gray-300 text-sm">重要條款 (Terms)</h4>
+                    <ul class="text-[11px] text-gray-500 space-y-2 list-decimal pl-4">
+                        <li>深度導賞行程一經確認，不可更改和退款。</li>
+                        <li>若遇無法估計狀況或天氣變化，上述行程將適時變動。</li>
+                        <li>參與人士可按個人喜好訂購專屬設計銘柄日本酒 (OEM)，6本起訂。</li>
+                        <li>OEM 定制產品最少訂購量為 36 本起。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 預約諮詢 -->
+    <section id="booking" class="py-24 bg-white">
+        <div class="max-w-xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold serif mb-4">預約深度導賞</h2>
+                <p class="text-gray-500 text-sm">請填寫以下信息，Morikiko Club 行程顧問將與您聯繫</p>
+            </div>
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wider">姓名 / Name</label>
+                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-accent outline-none transition text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wider">聯絡電話 / Phone</label>
+                        <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-accent outline-none transition text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wider">參與人數 / Guests</label>
+                        <input type="number" min="1" max="15" value="1" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-1 focus:ring-accent outline-none transition text-sm">
+                    </div>
+                </div>
+                <button type="button" class="w-full bg-accent text-white py-4 rounded-lg font-bold text-sm hover:bg-gray-800 shadow-lg transition" onclick="submitForm()">確認預約諮詢</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 獨立 Club 頁腳 -->
+    <footer class="bg-gray-50 py-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <!-- 修改：頁腳也移除圖片，僅保留純文字品牌 -->
+                <span class="text-2xl font-bold serif text-gray-400 tracking-tighter uppercase">Morikiko <span class="text-gray-300">Club</span></span>
+            </div>
+            <p class="text-gray-400 text-xs mb-8 tracking-widest uppercase">Morikiko Club | 深度研習 · 品味極致</p>
+            <div class="text-[10px] text-gray-300">
+                &copy; 2025 Morikiko Holdings Ltd. All Rights Reserved. <br>
+                提醒您：飲酒過量，有害健康。未成年請勿飲酒。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function submitForm() {
+            const messageBox = document.createElement('div');
+            messageBox.className = 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 rounded-2xl shadow-2xl z-50 text-center border border-accent max-w-sm';
+            messageBox.innerHTML = `
+                <h3 class="text-xl font-bold mb-4 text-gray-800 serif">預約申請已提交</h3>
+                <p class="text-gray-500 text-sm mb-6">Morikiko Club 行程顧問將於 24 小時內與您聯繫。</p>
+                <button onclick="this.parentElement.remove()" class="bg-accent text-white px-10 py-2 rounded-full font-bold text-xs uppercase tracking-widest">關閉</button>
+            `;
+            document.body.appendChild(messageBox);
+        }
+    </script>
+</body>
+</html>
