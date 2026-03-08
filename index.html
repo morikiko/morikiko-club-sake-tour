@@ -193,7 +193,7 @@
                 <a href="#" class="hover:text-white transition">關於 Club</a>
                 <a href="#" class="hover:text-white transition">會員服務條款</a>
                 <a href="#" class="hover:text-white transition">常見問題 FAQ</a>
-                <a href="#" class="hover:text-white transition">聯絡 Club 客服</a>
+                <button onclick="openContactModal()" class="hover:text-white transition focus:outline-none">聯絡 Club 客服</button>
             </div>
             <div class="w-12 h-px bg-stone-700 mx-auto mb-8"></div>
             <p class="text-[10px] uppercase tracking-[0.2em] mb-4 text-stone-500">A Community for Life Explorers</p>
@@ -203,5 +203,64 @@
         </div>
     </footer>
 
+    <div id="contactModal" class="fixed inset-0 z-[100] hidden">
+        <div id="modalOverlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300" onclick="closeContactModal()"></div>
+        
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0 pointer-events-none">
+            <div id="modalContent" class="relative bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all duration-300 sm:my-8 sm:max-w-sm w-full pointer-events-auto scale-95 opacity-0">
+                
+                <button onclick="closeContactModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 focus:outline-none transition">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <div class="px-6 py-8">
+                    <h3 class="text-xl font-bold text-stone-900 text-center mb-2">聯絡我們</h3>
+                    <p class="text-stone-500 text-sm text-center mb-6">請選擇您偏好的聯絡方式，我們會盡快回覆您。</p>
+                    
+                    <div class="space-y-3">
+                        <a href="https://wa.me/85294139882" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full px-4 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl font-bold transition duration-200 shadow-sm hover:shadow-md">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 001.602 6.03L0 24l6.148-1.57A11.96 11.96 0 0011.944 24c6.627 0 12-5.373 12-12S18.571 0 11.944 0zm0 21.962c-1.898 0-3.758-.507-5.405-1.465l-.388-.225-4.008 1.025 1.07-3.934-.247-.39A9.975 9.975 0 012.038 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10.056 10zm5.494-7.513c-.301-.151-1.785-.882-2.062-.983-.277-.101-.48-.151-.68.151-.202.302-.781.983-.958 1.185-.176.202-.353.227-.654.076-1.554-.775-2.735-1.874-3.411-3.056-.076-.126.024-.225.101-.325.075-.1.176-.201.252-.301.075-.101.1-.176.15-.276.05-.101.025-.202-.012-.277-.038-.076-.681-1.642-.932-2.247-.245-.591-.495-.512-.68-.522-.176-.01-.38-.01-.582-.01-.202 0-.53.076-.807.378-.277.302-1.06 1.033-1.06 2.519s1.085 2.923 1.236 3.124c.151.202 2.132 3.255 5.166 4.562 1.346.58 2.391.878 3.209 1.121.905.268 1.728.23 2.378.139.73-.102 2.245-.918 2.559-1.803.314-.885.314-1.642.221-1.803-.094-.161-.347-.252-.648-.403z"/></svg>
+                            使用 WhatsApp
+                        </a>
+                        
+                        <a href="mailto:morikiko@mori-kiko.com" class="flex items-center justify-center w-full px-4 py-3 bg-stone-50 hover:bg-stone-100 text-stone-800 rounded-xl font-bold transition duration-200 shadow-sm hover:shadow-md border border-stone-200">
+                            <svg class="w-5 h-5 mr-2 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            發送電子郵件
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('contactModal');
+        const overlay = document.getElementById('modalOverlay');
+        const content = document.getElementById('modalContent');
+
+        function openContactModal() {
+            // 先顯示元素，再執行淡入與縮放動畫
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                overlay.classList.remove('opacity-0');
+                content.classList.remove('opacity-0', 'scale-95');
+                content.classList.add('opacity-100', 'scale-100');
+            }, 10);
+        }
+
+        function closeContactModal() {
+            // 先執行淡出與縮放動畫
+            overlay.classList.add('opacity-0');
+            content.classList.remove('opacity-100', 'scale-100');
+            content.classList.add('opacity-0', 'scale-95');
+            
+            // 等待動畫結束 (300ms) 後再完全隱藏元素
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
 </body>
 </html>
