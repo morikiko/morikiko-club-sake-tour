@@ -31,6 +31,10 @@
             transform: translateY(-8px);
             box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.1);
         }
+
+        /* 隱藏橫向滑動區塊的預設捲軸，保持美觀 */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="text-stone-800 antialiased selection:bg-stone-800 selection:text-white">
@@ -46,7 +50,7 @@
                 <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
                     <a href="#about" class="hover:text-stone-900 transition">關於 Club</a>
                     <a href="#activities" class="hover:text-stone-900 transition">探索活動</a>
-                    <a href="#past-highlights" class="hover:text-stone-900 transition">精彩回顧</a>
+                    <a href="#trending-events" class="hover:text-stone-900 transition">近期焦點</a>
                     <a href="#" class="bg-stone-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-stone-700 transition shadow-md">
                         登入 / 加入我們
                     </a>
@@ -79,7 +83,7 @@
             <h2 class="text-3xl font-bold mb-6 text-stone-900">什麼是 Morikiko Club？</h2>
             <div class="w-16 h-1 bg-stone-900 mx-auto mb-8"></div>
             <p class="text-stone-600 leading-loose text-lg text-center">
-                這不是一個單向接收資訊的平台，而是一個由共同興趣連結的實體社群。我們精選四大領域的獨特企劃——從輕鬆入門的咖啡品飲、說走就走的戶外體驗，到啟發靈感的文化對話。在 Morikiko Club，每個活動都是認識新朋友、拓展生活視野的絕佳機會
+                這不是一個單向接收資訊的平台，而是一個由共同興趣連結的實體社群。我們精選四大領域的獨特企劃——從輕鬆入門的咖啡品飲、說走就走的戶外體驗，到啟發靈感的文化對話。在 Morikiko Club，每個活動都是認識新朋友、拓展生活視野的絕佳機會。
             </p>
         </div>
     </section>
@@ -101,7 +105,7 @@
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-stone-900 mb-3">品味生活</h3>
                         <p class="text-stone-500 text-sm leading-relaxed flex-grow">
-                            從一杯手沖咖啡的講究，到一場輕鬆的週末日本酒小聚。讓日常更有味道
+                            從一杯手沖咖啡的講究，到一場輕鬆的週末日本酒小聚。讓日常更有味道。
                         </p>
                         <div class="mt-4 text-stone-900 font-bold text-sm inline-flex items-center">
                             查看近期活動 <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -117,7 +121,7 @@
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-stone-900 mb-3">運動休閒</h3>
                         <p class="text-stone-500 text-sm leading-relaxed flex-grow">
-                            流汗最快樂！無論是熱血的海外棒球交流營，還是週末的近郊健行
+                            流汗最快樂！無論是熱血的海外棒球交流營，還是週末的近郊健行。
                         </p>
                         <div class="mt-4 text-stone-900 font-bold text-sm inline-flex items-center">
                             查看近期活動 <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -127,13 +131,13 @@
 
                 <a href="culture.html" class="category-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col h-full">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="culture.jpg" alt="文化藝術" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1518998053401-a4145d30f36e?auto=format&fit=crop&q=80&w=800" alt="文化藝術" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-stone-900 mb-3">文化藝術</h3>
                         <p class="text-stone-500 text-sm leading-relaxed flex-grow">
-                            藝文展覽導覽、手作工坊與創作沙龍。啟發生活中的靈感與創意
+                            藝文展覽導覽、手作工坊與創作沙龍。啟發生活中的靈感與創意。
                         </p>
                         <div class="mt-4 text-stone-900 font-bold text-sm inline-flex items-center">
                             查看近期活動 <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -149,7 +153,7 @@
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-stone-900 mb-3">美容養生</h3>
                         <p class="text-stone-500 text-sm leading-relaxed flex-grow">
-                            專注於身心靈的平衡。提供舒壓瑜伽、保養講座等呵護自己的體驗
+                            專注於身心靈的平衡。提供舒壓瑜伽、保養講座等呵護自己的體驗。
                         </p>
                         <div class="mt-4 text-stone-900 font-bold text-sm inline-flex items-center">
                             查看近期活動 <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -161,18 +165,78 @@
         </div>
     </section>
 
-    <section id="past-highlights" class="py-20 bg-white border-t border-stone-200">
+    <section id="trending-events" class="py-24 bg-white border-t border-stone-200 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between bg-stone-50 p-8 rounded-3xl border border-stone-100 shadow-sm">
+            
+            <div class="flex items-end justify-between mb-10">
+                <div>
+                    <span class="text-stone-400 font-bold tracking-widest text-sm uppercase block mb-2">Trending Now</span>
+                    <h2 class="text-3xl font-black text-stone-900">近期焦點企劃</h2>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <button class="w-10 h-10 rounded-full border border-stone-300 flex items-center justify-center hover:bg-stone-100 transition"><svg class="w-5 h-5 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+                    <button class="w-10 h-10 rounded-full border border-stone-300 flex items-center justify-center hover:bg-stone-100 transition"><svg class="w-5 h-5 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+                </div>
+            </div>
+
+            <div class="flex overflow-x-auto pb-8 -mx-6 px-6 gap-6 snap-x hide-scrollbar">
+                
+                <a href="saketrip.html" class="snap-start shrink-0 w-72 md:w-80 group cursor-pointer block">
+                    <div class="h-56 rounded-2xl overflow-hidden relative mb-4 shadow-sm">
+                        <div class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] px-2 py-1 rounded font-bold z-10 tracking-widest uppercase">熱烈報名中</div>
+                        <img src="https://images.unsplash.com/photo-1612910113708-20b14566f149?auto=format&fit=crop&q=80&w=800" alt="日本酒" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-stone-400 text-xs font-bold uppercase tracking-widest block mb-1">品味生活</span>
+                    <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-600 transition mb-2 line-clamp-1">日本酒品飲深度導賞</h3>
+                    <p class="text-stone-500 text-sm line-clamp-2 mb-3">走訪神戶「灘五鄉」知名酒造，從專業品質鑑定視角親歷日本酒精髓。</p>
+                </a>
+
+                <a href="culture.html" class="snap-start shrink-0 w-72 md:w-80 group cursor-pointer block">
+                    <div class="h-56 rounded-2xl overflow-hidden relative mb-4 shadow-sm bg-[#0b0e1b]">
+                        <div class="absolute top-3 left-3 bg-indigo-600 text-white text-[10px] px-2 py-1 rounded font-bold z-10 tracking-widest uppercase">2026 夏季</div>
+                        <img src="drama camp 26.jpg" alt="音樂劇" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-stone-400 text-xs font-bold uppercase tracking-widest block mb-1">文化藝術</span>
+                    <h3 class="text-lg font-bold text-stone-900 group-hover:text-indigo-600 transition mb-2 line-clamp-1">英語音樂劇夏令營</h3>
+                    <p class="text-stone-500 text-sm line-clamp-2 mb-3">結合大阪文化底蘊與專業劇場美學，打造全方位的藝術成長舞台。</p>
+                </a>
+
+                <a href="culture.html" class="snap-start shrink-0 w-72 md:w-80 group cursor-pointer block">
+                    <div class="h-56 rounded-2xl overflow-hidden relative mb-4 shadow-sm bg-[#e8e3d9]">
+                        <div class="absolute top-3 left-3 bg-[#7a8c7a] text-white text-[10px] px-2 py-1 rounded font-bold z-10 tracking-widest uppercase">專屬呈獻</div>
+                        <img src="tea dou.jpg" alt="茶道" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-stone-400 text-xs font-bold uppercase tracking-widest block mb-1">文化藝術</span>
+                    <h3 class="text-lg font-bold text-stone-900 group-hover:text-[#7a8c7a] transition mb-2 line-clamp-1">一期一會：茶道體驗</h3>
+                    <p class="text-stone-500 text-sm line-clamp-2 mb-3">由京都友誼大使親臨指導，近距離欣賞點前示範與品嚐精緻抹茶。</p>
+                </a>
+
+                <div class="snap-start shrink-0 w-72 md:w-80 group cursor-pointer block">
+                    <div class="h-56 rounded-2xl overflow-hidden relative mb-4 shadow-sm bg-stone-200">
+                        <div class="absolute top-3 left-3 bg-stone-600 text-white text-[10px] px-2 py-1 rounded font-bold z-10 tracking-widest uppercase">即將推出</div>
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=800" alt="咖啡" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500">
+                    </div>
+                    <span class="text-stone-400 text-xs font-bold uppercase tracking-widest block mb-1">品味生活</span>
+                    <h3 class="text-lg font-bold text-stone-900 group-hover:text-stone-600 transition mb-2 line-clamp-1">週末手沖大師班</h3>
+                    <p class="text-stone-500 text-sm line-clamp-2 mb-3">從選豆到注水，打造專屬你的早晨儀式感。敬請期待。</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="past-highlights" class="py-20 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between bg-white p-8 rounded-3xl border border-stone-100 shadow-sm">
                 <div class="flex items-center mb-6 md:mb-0">
-                    <div class="w-1.5 h-12 bg-amber-500 rounded-full mr-6 hidden md:block"></div>
+                    <div class="w-1.5 h-12 bg-stone-800 rounded-full mr-6 hidden md:block"></div>
                     <div>
                         <span class="text-stone-400 font-bold tracking-widest text-xs uppercase block mb-1">Last Year's Success</span>
                         <h2 class="text-2xl font-black text-stone-900">過往精彩活動回顧</h2>
                     </div>
                 </div>
                 
-                <a href="baseballcamp2024.html" class="group flex items-center bg-white px-6 py-5 rounded-2xl shadow-md hover:shadow-xl transition border border-stone-200 w-full md:w-auto">
+                <a href="baseballcamp2024.html" class="group flex items-center bg-stone-50 px-6 py-5 rounded-2xl shadow-sm hover:shadow-md transition border border-stone-200 w-full md:w-auto">
                     <div class="w-16 h-16 rounded-xl overflow-hidden mr-5 shadow-inner">
                         <img src="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&q=80&w=200" alt="棒球回顧" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
@@ -207,26 +271,19 @@
 
     <div id="contactModal" class="fixed inset-0 z-[100] hidden">
         <div id="modalOverlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300" onclick="closeContactModal()"></div>
-        
         <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0 pointer-events-none">
             <div id="modalContent" class="relative bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all duration-300 sm:my-8 sm:max-w-sm w-full pointer-events-auto scale-95 opacity-0">
-                
                 <button onclick="closeContactModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 focus:outline-none transition">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
-
                 <div class="px-6 py-8">
                     <h3 class="text-xl font-bold text-stone-900 text-center mb-2">聯絡我們</h3>
                     <p class="text-stone-500 text-sm text-center mb-6">請選擇您偏好的聯絡方式，我們會盡快回覆您。</p>
-                    
                     <div class="space-y-3">
                         <a href="https://wa.me/85294139882" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full px-4 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl font-bold transition duration-200 shadow-sm hover:shadow-md">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 001.602 6.03L0 24l6.148-1.57A11.96 11.96 0 0011.944 24c6.627 0 12-5.373 12-12S18.571 0 11.944 0zm0 21.962c-1.898 0-3.758-.507-5.405-1.465l-.388-.225-4.008 1.025 1.07-3.934-.247-.39A9.975 9.975 0 012.038 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10.056 10zm5.494-7.513c-.301-.151-1.785-.882-2.062-.983-.277-.101-.48-.151-.68.151-.202.302-.781.983-.958 1.185-.176.202-.353.227-.654.076-1.554-.775-2.735-1.874-3.411-3.056-.076-.126.024-.225.101-.325.075-.1.176-.201.252-.301.075-.101.1-.176.15-.276.05-.101.025-.202-.012-.277-.038-.076-.681-1.642-.932-2.247-.245-.591-.495-.512-.68-.522-.176-.01-.38-.01-.582-.01-.202 0-.53.076-.807.378-.277.302-1.06 1.033-1.06 2.519s1.085 2.923 1.236 3.124c.151.202 2.132 3.255 5.166 4.562 1.346.58 2.391.878 3.209 1.121.905.268 1.728.23 2.378.139.73-.102 2.245-.918 2.559-1.803.314-.885.314-1.642.221-1.803-.094-.161-.347-.252-.648-.403z"/></svg>
                             使用 WhatsApp
                         </a>
-                        
                         <a href="mailto:morikiko@mori-kiko.com" class="flex items-center justify-center w-full px-4 py-3 bg-stone-50 hover:bg-stone-100 text-stone-800 rounded-xl font-bold transition duration-200 shadow-sm hover:shadow-md border border-stone-200">
                             <svg class="w-5 h-5 mr-2 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             發送電子郵件
@@ -241,9 +298,7 @@
         const modal = document.getElementById('contactModal');
         const overlay = document.getElementById('modalOverlay');
         const content = document.getElementById('modalContent');
-
         function openContactModal() {
-            // 先顯示元素，再執行淡入與縮放動畫
             modal.classList.remove('hidden');
             setTimeout(() => {
                 overlay.classList.remove('opacity-0');
@@ -251,17 +306,11 @@
                 content.classList.add('opacity-100', 'scale-100');
             }, 10);
         }
-
         function closeContactModal() {
-            // 先執行淡出與縮放動畫
             overlay.classList.add('opacity-0');
             content.classList.remove('opacity-100', 'scale-100');
             content.classList.add('opacity-0', 'scale-95');
-            
-            // 等待動畫結束 (300ms) 後再完全隱藏元素
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
+            setTimeout(() => { modal.classList.add('hidden'); }, 300);
         }
     </script>
 </body>
