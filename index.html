@@ -369,15 +369,15 @@
                 submitBtn.disabled = true;
                 submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
 
-                // 自動合併區號與電話號碼
-                const countryCode = document.getElementById('countryCode').value;
-                const phoneNumber = document.getElementById('phone').value;
-                const fullPhone = countryCode ? `${countryCode} ${phoneNumber}` : phoneNumber;
+                // 分別取得區號與電話，不再合併，讓 Make.com 可以分兩個欄位接收
+                const selectedCountryCode = document.getElementById('countryCode').value;
+                const inputPhoneNumber = document.getElementById('phone').value;
 
                 const formData = {
                     name: document.getElementById('name').value,
                     email: document.getElementById('email').value,
-                    phone: fullPhone, // 送出合併後的號碼 (例如: +852 98765432)
+                    countryCode: selectedCountryCode, // 獨立傳送國家區號
+                    phone: inputPhoneNumber,          // 獨立傳送電話號碼
                     company: document.getElementById('company').value,
                     source: '首頁底部註冊表單',
                     timestamp: new Date().toISOString()
