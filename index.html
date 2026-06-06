@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth"> <head>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morikiko Club - 你的專屬生活體驗社群</title>
@@ -322,7 +323,6 @@
     </div>
 
     <script>
-        // === 原有的 Modal 邏輯 ===
         const modal = document.getElementById('contactModal');
         const overlay = document.getElementById('modalOverlay');
         const content = document.getElementById('modalContent');
@@ -351,23 +351,18 @@
             }
         }
 
-        // ==========================================
-        // 新增：表單送出與 Make Webhook 串接邏輯
-        // ==========================================
         const ecosystemForm = document.getElementById('ecosystemForm');
         if(ecosystemForm) {
             ecosystemForm.addEventListener('submit', function(e) {
-                e.preventDefault(); // 阻止網頁跳轉
+                e.preventDefault(); 
                 
                 const submitBtn = document.getElementById('submitBtn');
                 const originalBtnText = submitBtn.innerText;
                 
-                // 變更按鈕狀態為處理中
                 submitBtn.innerHTML = '<svg class="animate-spin h-5 w-5 mr-3 inline-block text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> 處理中...';
                 submitBtn.disabled = true;
                 submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
 
-                // 收集表單資料
                 const formData = {
                     name: document.getElementById('name').value,
                     email: document.getElementById('email').value,
@@ -377,10 +372,8 @@
                     timestamp: new Date().toISOString()
                 };
 
-                // ★★★ 請將下面這行網址替換為您在 Make.com 產生的 Webhook 網址 ★★★
-                const makeWebhookUrl = 'https://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxxxxxx';
+                const makeWebhookUrl = 'https://hook.eu1.make.com/h9tsxgr0wrt1rfnls2rv159nw8r4fowm';
 
-                // 背景發送請求
                 fetch(makeWebhookUrl, {
                     method: 'POST',
                     headers: {
@@ -389,15 +382,11 @@
                     body: JSON.stringify(formData)
                 })
                 .then(response => {
-                    // 若您日後做好了感謝頁面，請將下面這行註解打開：
-                    // window.location.href = 'thank-you.html'; 
-                    
                     alert('🎉 感謝您的申請，資料已成功送出！\n\n(開發者提示：未來可以自動跳轉到感謝頁面)');
                     resetButton();
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    // 因 CORS 問題測試時可能會報錯，但 Make 依然能收到
                     alert('🎉 感謝您的申請，資料已成功送出！'); 
                     resetButton();
                 });
@@ -406,7 +395,7 @@
                     submitBtn.innerText = originalBtnText;
                     submitBtn.disabled = false;
                     submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
-                    ecosystemForm.reset(); // 清空表單欄位
+                    ecosystemForm.reset(); 
                 }
             });
         }
